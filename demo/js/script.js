@@ -13,11 +13,11 @@ var precipitation = L.tileLayer.wms("http://mesonet.agron.iastate.edu/cgi-bin/wm
 		}).addTo(map);
 
 
-var tornadowarnings = L.tileLayer.wms("http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteoceanhydro_shortduration_hazards_warnings_time/MapServer/WMSServer", {
-				layers: '3',
+var tornadowarnings = L.tileLayer.wms("http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteoceanhydro_shortduration_hazards_watches_time/MapServer/WMSServer", {
+				layers: '2',
 				format: 'image/png',
 				transparent: true,
-				attribution: "NOAA Warnings, Watches and Advisories"
+				attribution: "NOAA Watches"
 		}).addTo(map);
 
 
@@ -36,7 +36,7 @@ var baseLayers = {
 				};
 
 var overlays = {
-				    "Precipication": precipitation,
+				    "Precipitation": precipitation,
 				    "Tornado Warnings": tornadowarnings,
 						"Relative Humidity": relativehumidity
 				};
